@@ -14,7 +14,7 @@ document.getElementById('contactForm').addEventListener('submit', async e => {
   };
 
   try {
-    const res = await fetch('https://my-backend-mn6bg7gp7-brents-projects-5aa6c14d.vercel.app', {
+    const res = await fetch('https://my-backend-mn6bg7gp7-brents-projects-5aa6c14d.vercel.app/api/sendEmail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
