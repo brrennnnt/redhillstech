@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   try {
-    const res = await fetch("https://my-backend-678sk36gj-brents-projects-5aa6c14d.vercel.app/api/sendEmail", {
+    const res = await fetch("https://my-backend-nei4mhzrh-brents-projects-5aa6c14d.vercel.app/api/sendEmail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
