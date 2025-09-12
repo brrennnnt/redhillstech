@@ -1,0 +1,110 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #bc3b24;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  background-color: #bc3b24;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.tagline {
+  display: inline-block;
+  background: #9a301d;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Card style */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Two-column layout */
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.two-column .card {
+  flex: 1 1 45%;
+}
+
+/* Profile Photo */
+.profile-photo {
+  display: block;
+  max-width: 240px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  background-color: #bc3b24;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #D9503C;
+  border: 2px solid #9A301D;
+  box-shadow: 0 0 8px rgba(248, 240, 250, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+}
