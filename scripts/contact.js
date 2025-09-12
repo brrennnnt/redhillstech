@@ -1,9 +1,7 @@
-document.getElementById('contactForm').addEventListener('submit', async e => {
-  e.preventDefault();
-  const form = e.target;
+const form = document.getElementById("contactForm");
 
-  // Honeypot check
-  if (form.website.value !== "") return;
+form.addEventListener("submit", async (e) => {
+  e.preventDefault(); // ❌ prevents default HTML form submit
 
   const data = {
     name: form.name.value,
@@ -14,21 +12,21 @@ document.getElementById('contactForm').addEventListener('submit', async e => {
   };
 
   try {
-    const res = await fetch('https://my-backend-678sk36gj-brents-projects-5aa6c14d.vercel.app/api/sendEmail', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("https://my-backend-678sk36gj-brents-projects-5aa6c14d.vercel.app/api/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     });
 
     const result = await res.json();
     if (result.success) {
-      alert('Thank you! Your request has been sent.');
+      alert("Form submitted successfully!");
       form.reset();
     } else {
-      alert('Error sending form. Please try again later.');
+      alert("Error sending form: " + result.message);
     }
   } catch (err) {
     console.error(err);
-    alert('Error sending form. Please try again later.');
+    alert("Error sending form. Please try again later.");
   }
 });
